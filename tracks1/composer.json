@@ -1,0 +1,6 @@
+{
+    "require": {
+        "rakibtg/sleekdb": "^1.5",
+        "rakit/validation": "^1.2"
+    }
+}
