@@ -2,7 +2,6 @@
 const add = (a, b) => a + b; //azigen
 */
 
-console.log(11)
 
 /**
  * Multiplies the two numbers passed

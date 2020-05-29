@@ -14,8 +14,7 @@ app.use((request, response, next) => {
 
 // /welcome/Győző
 app.get('/', (request, response) => {
-    // const name = request.query.name
-    const name = request.name
+    const name = request.query.name || request.name
     response.json({
         message: `Hello ${name}!`
     })

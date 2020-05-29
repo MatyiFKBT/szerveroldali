@@ -6,10 +6,10 @@ const router = express.Router();
 
 router
   .post('/:id/tracks',      async (req, res) => {
-    const id = req.params.id
+    const {id} = req.params
     const track = req.body
 
-    const user = await User.findOne({ where: {id: id} })
+    const user = await User.findOne({ where: {id} })
     const newTrack = await Track.create(track)
     await newTrack.setUser(user)
     

@@ -13,7 +13,7 @@ router
   }))
   .get('/:id',    asyncHandler(async (req, res) => {
     const id = req.params.id
-    const track = await Track.findOne({ where: {id: id} })
+    const track = await Track.findOne({ where: {id} })
     res.send(track ? track : 404)
   }))
   .post('/',      asyncHandler(async (req, res) => {

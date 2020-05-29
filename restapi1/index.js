@@ -21,7 +21,13 @@ app.use(express.json())
 app.use('/tracks', tracksRouter)
 
 async function start() {
-  await Track.sync()
+  //force sync, utána létrehozunk egy trackot
+  await Track.sync({force: true})
+  await Track.create({
+    name: 'track1',
+    color: 'blue'
+  });
+  
   const port = process.env.PORT || 3000
   app.listen(port, () => 
     console.log('Example app listening on port 3000!'));
